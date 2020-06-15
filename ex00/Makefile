@@ -12,7 +12,6 @@
 
 NAME = eval_expr
 
-FLAGS = -Wall -Wextra -Werror
 
 H_FILES = stack.h
 
@@ -23,7 +22,7 @@ OBJECTS = $(SRC:.c=.o)
 all: $(NAME)
 
 $(NAME):
-	gcc $(FLAGS) -c $(SRC)
+	gcc -c $(SRC)
 	gcc $(FLAGS) $(OBJECTS) -o $(NAME)
 
 clean:
